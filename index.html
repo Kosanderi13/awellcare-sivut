@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aWellCare Oy – Julkisten hankintojen kilpailutusten erikoisosaaja</title>
+<meta name="description" content="aWellCare Oy on erikoistunut julkisten hankintojen kilpailutuksiin. Palvelemme onnistumiseen sekä tarjoajia että hankintayksiköitä.">
+<link rel="canonical" href="https://www.awellcare.fi">
+<meta property="og:site_name" content="aWellCare Oy">
+<meta property="og:title" content="aWellCare Oy – Julkisten hankintojen kilpailutusten erikoisosaaja">
+<meta property="og:description" content="Julkisten hankintojen kilpailutukset tarjoajille ja hankintayksiköille.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.awellcare.fi">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#eef2f8;
+    --paper-2:#e0e8f4;
+    --ink:#0e2240;
+    --ink-soft:#3c4f68;
+    --line:#c4d0e2;
+    --accent:#1f5fb0;
+    --accent-deep:#143f7a;
+    --accent-glow:#4f93dd;
+    --amber:#2f6fc4;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  h1,h2,h3,.display{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:2}
+
+  /* ---------- NAV ---------- */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(244,241,234,.82);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:11px;font-family:"Fraunces",serif;font-size:1.32rem;font-weight:600;letter-spacing:-.02em}
+  .brand .dot{width:13px;height:13px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(31,95,176,.18)}
+  .navlinks{display:flex;gap:34px;align-items:center;font-size:.95rem;font-weight:500}
+  .navlinks a{position:relative;padding:4px 0;color:var(--ink-soft);transition:color .2s}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--accent);transition:width .25s}
+  .navlinks a:hover{color:var(--ink)}
+  .navlinks a:hover::after{width:100%}
+  .nav-cta{background:var(--ink);color:var(--paper)!important;padding:10px 20px;border-radius:999px;font-weight:500}
+  .nav-cta::after{display:none}
+  .nav-cta:hover{background:var(--accent-deep)}
+  .burger{display:none;background:none;border:0;cursor:pointer;font-size:1.5rem;color:var(--ink)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:96px 0 84px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+  .hero-bg .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5}
+  .hero-bg .b1{width:520px;height:520px;background:radial-gradient(circle,#4f93dd,transparent 70%);top:-160px;right:-120px}
+  .hero-bg .b2{width:420px;height:420px;background:radial-gradient(circle,#2f6fc4,transparent 70%);bottom:-180px;left:-100px;opacity:.28}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);font-weight:600;margin-bottom:26px}
+  .eyebrow::before{content:"";width:30px;height:1.5px;background:var(--accent)}
+  .hero h1{font-size:clamp(2.6rem,5.4vw,4.3rem);margin-bottom:24px}
+  .hero h1 em{font-style:italic;color:var(--accent-deep)}
+  .hero p.lead{font-size:1.18rem;color:var(--ink-soft);max-width:30em;margin-bottom:36px}
+  .btn-row{display:flex;gap:16px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:999px;font-weight:500;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:0}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 30px -10px rgba(31,95,176,.6)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 36px -10px rgba(31,95,176,.72)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .hero-card{position:relative;background:var(--ink);color:var(--paper);border-radius:22px;padding:38px 34px;box-shadow:0 30px 70px -30px rgba(19,32,45,.7)}
+  .hero-card h3{font-size:1.35rem;margin-bottom:20px;color:#fff}
+  .hero-card .stat{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .hero-card .stat:last-child{border:0;padding-bottom:0}
+  .hero-card .num{font-family:"Fraunces",serif;font-size:2rem;color:var(--accent-glow);min-width:1.6em}
+  .hero-card .stat span{font-size:.96rem;color:#c8d2da}
+
+  /* fade-up */
+  .fade{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .fade.in{opacity:1;transform:none}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:88px 0;position:relative}
+  .sec-head{max-width:42em;margin-bottom:54px}
+  .sec-head .eyebrow{margin-bottom:18px}
+  .sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin-bottom:18px}
+  .sec-head p{font-size:1.1rem;color:var(--ink-soft)}
+
+  /* ---------- ABOUT ---------- */
+  #meista{background:var(--paper-2)}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .about-grid .big{font-family:"Fraunces",serif;font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.3;color:var(--ink)}
+  .about-grid .big em{color:var(--accent-deep);font-style:italic}
+  .about-grid p{color:var(--ink-soft);font-size:1.05rem;margin-top:20px}
+  .mark{position:relative;aspect-ratio:1;border-radius:22px;background:linear-gradient(135deg,var(--accent),var(--accent-deep));display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 30px 60px -28px rgba(20,63,122,.8)}
+  .mark svg{width:62%;height:62%;opacity:.95}
+  .mark::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 20h40M20 0v40' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='1'/%3E%3C/svg%3E")}
+
+  /* ---------- SERVICES ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .cards.duo{grid-template-columns:repeat(2,1fr);max-width:940px;margin:0 auto}
+  .card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:34px 30px;transition:transform .3s,box-shadow .3s,border-color .3s;overflow:hidden}
+  .card::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 26px 54px -28px rgba(19,32,45,.5);border-color:transparent}
+  .card:hover::before{transform:scaleX(1)}
+  .card .ic{width:54px;height:54px;border-radius:13px;background:var(--paper-2);display:flex;align-items:center;justify-content:center;margin-bottom:22px;color:var(--accent-deep)}
+  .card .ic svg{width:28px;height:28px}
+  .card .no{font-family:"Fraunces",serif;font-size:.95rem;color:var(--accent);letter-spacing:.05em;margin-bottom:8px}
+  .card h3{font-size:1.32rem;margin-bottom:14px}
+  .card p{color:var(--ink-soft);font-size:1rem}
+
+  /* ---------- CLIENTS ---------- */
+  #asiakkaat{background:var(--ink);color:var(--paper)}
+  #asiakkaat .eyebrow{color:var(--accent-glow)}
+  #asiakkaat .eyebrow::before{background:var(--accent-glow)}
+  #asiakkaat .sec-head h2{color:#fff}
+  #asiakkaat .sec-head p{color:#aebac3}
+  .clients{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12)}
+  .client{padding:30px 26px;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:6px;transition:background .25s}
+  .client:hover{background:rgba(79,147,221,.14)}
+  .client .cname{font-family:"Fraunces",serif;font-size:1.28rem;color:#fff}
+  .client .ctag{font-size:.82rem;color:#9fb0b8;letter-spacing:.02em}
+  .client a.cname:hover{color:var(--accent-glow)}
+
+  /* ---------- CONTACT ---------- */
+  .contacts{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:780px}
+  .contacts .line{display:flex;gap:16px;align-items:center;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .contacts .ic{width:46px;height:46px;border-radius:12px;background:var(--paper);display:flex;align-items:center;justify-content:center;color:var(--accent-deep);flex-shrink:0}
+  .contacts .ic svg{width:22px;height:22px}
+  .contacts .lbl{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:3px}
+  .contacts .val{font-size:1.06rem;font-weight:500;word-break:break-word}
+  .contacts .val a:hover{color:var(--accent-deep)}
+  form{background:var(--paper-2);border-radius:20px;padding:34px;border:1px solid var(--line)}
+  .field{margin-bottom:18px}
+  label{display:block;font-size:.85rem;font-weight:500;margin-bottom:7px;color:var(--ink)}
+  input,textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;background:var(--paper);font-family:inherit;font-size:1rem;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+  input:focus,textarea:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 3px rgba(31,95,176,.16)}
+  textarea{resize:vertical;min-height:120px}
+  .formnote{font-size:.82rem;color:var(--ink-soft);margin-top:14px}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--paper-2);border-top:1px solid var(--line);padding:40px 0}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;font-size:.9rem;color:var(--ink-soft)}
+  .foot .brand{font-size:1.1rem;color:var(--ink)}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:860px){
+    .navlinks{position:fixed;inset:74px 0 auto 0;background:var(--paper);flex-direction:column;gap:0;padding:8px 0;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .3s;box-shadow:0 20px 40px -20px rgba(0,0,0,.2)}
+    .navlinks.open{transform:none}
+    .navlinks a{width:100%;text-align:center;padding:14px 0}
+    .nav-cta{margin:8px auto}
+    .burger{display:block}
+    .hero .wrap,.about-grid,.contacts{grid-template-columns:1fr}
+    .cards,.cards.duo,.clients{grid-template-columns:1fr}
+    .hero{padding:60px 0}
+    .mark{max-width:340px;margin:0 auto}
+    section{padding:64px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand"><span class="dot"></span>aWellCare<span style="font-weight:400;color:var(--ink-soft)">&nbsp;Oy</span></a>
+      <div class="navlinks" id="menu">
+        <a href="#meista">Meistä</a>
+        <a href="#palvelut">Palvelut</a>
+        <a href="#asiakkaat">Asiakkaat</a>
+        <a href="#yhteys" class="nav-cta">Ota yhteyttä</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Valikko">☰</button>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="hero-bg"><div class="blob b1"></div><div class="blob b2"></div></div>
+  <div class="wrap">
+    <div class="fade">
+      <span class="eyebrow">Julkiset hankinnat · Kilpailutukset</span>
+      <h1>Julkisten hankintojen <em>kilpailutusten</em> huippuosaaja.</h1>
+      <p class="lead">aWellCare Oy on erikoistunut julkisten hankintojen kilpailutuksiin — ja palvelee onnistumiseen sekä tarjoajia että hankintayksiköitä.</p>
+      <div class="btn-row">
+        <a href="#yhteys" class="btn btn-primary">Ota yhteyttä →</a>
+        <a href="#palvelut" class="btn btn-ghost">Tutustu palveluihin</a>
+      </div>
+    </div>
+    <div class="hero-card fade">
+      <h3>Yksi erikoisala, kaksi näkökulmaa</h3>
+      <div class="stat"><span class="num">01</span><span>Huippuluokan osaaminen julkisissa hankinnoissa</span></div>
+      <div class="stat"><span class="num">02</span><span>Tarjoajille — voittavat tarjoukset</span></div>
+      <div class="stat"><span class="num">03</span><span>Hankintayksiköille — onnistuneet kilpailutukset</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="meista">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="fade">
+        <span class="eyebrow">Meistä</span>
+        <p class="big">Julkiset hankinnat ovat <em>mahdollisuus</em> — niin tarjoajalle kuin hankintayksiköllekin. Oikein tehty kilpailutus tuottaa parhaan lopputuloksen molemmille osapuolille.</p>
+        <p>aWellCare Oy on keskittynyt julkisten hankintojen kilpailutuksiin. Tukemme kattaa koko prosessin — tarjoajan menestyksekkäästä tarjouksesta hankintayksikön onnistuneeseen ja hankintalain mukaiseen kilpailutukseen.</p>
+      </div>
+      <div class="mark fade">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M50 14 L82 26 V52 C82 72 68 84 50 90 C32 84 18 72 18 52 V26 Z"/>
+          <path d="M37 50 L46 60 L65 40"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="palvelut">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Palvelut</span>
+      <h2>Julkisten hankintojen kilpailutusten erikoisosaaja</h2>
+      <p>Erikoisalana julkiset hankinnat ja niiden kilpailutukset — huippuluokan osaamisella. Palvelen onnistumiseen molemmilla puolilla pöytää: sekä tarjoajia että hankintayksiköitä.</p>
+    </div>
+    <div class="cards duo">
+      <div class="card fade">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v4a6 6 0 0 1-12 0Z"/><path d="M6 6H3v1a3 3 0 0 0 3 3M18 6h3v1a3 3 0 0 1-3 3"/><path d="M9 20h6M12 14v6"/></svg></div>
+        <div class="no">Tarjoajille</div>
+        <h3>Voittavat tarjoukset</h3>
+        <p>Autan yrityksiä menestymään julkisissa tarjouskilpailuissa: tarjouspyyntöjen tulkinta, voittavan tarjouksen rakentaminen, hinnan ja laatupisteiden optimointi sekä hankintalain sudenkuoppien välttäminen — uutta liikevaihtoa tarjouskilpailujen kautta.</p>
+      </div>
+      <div class="card fade">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7 2 13a3 3 0 0 0 6 0Z"/><path d="m19 7-3 6a3 3 0 0 0 6 0Z"/></svg></div>
+        <div class="no">Hankintayksiköille</div>
+        <h3>Onnistuneet kilpailutukset</h3>
+        <p>Tuen hankintayksiköitä laadukkaiden ja hankintalain mukaisten kilpailutusten valmistelussa: tarjouspyynnön ja vertailuperusteiden laadinta, markkinakartoitus sekä koko hankintaprosessin läpivienti parhaaseen lopputulokseen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="asiakkaat">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Asiakkaitamme</span>
+      <h2>Lisäarvoa saaneita asiakkaitamme</h2>
+      <p>Tuloksellista yhteistyötä ja yhdessä oppimista eri toimialojen organisaatioiden kanssa.</p>
+    </div>
+    <div class="clients fade">
+      <div class="client"><a class="cname" href="https://www.wihuri.com" target="_blank" rel="noopener">Wihuri-konserni</a><span class="ctag">Monialakonserni</span></div>
+      <div class="client"><a class="cname" href="https://www.forendo.com" target="_blank" rel="noopener">Forendo Pharma Oy</a><span class="ctag">Lääketeollisuus</span></div>
+      <div class="client"><a class="cname" href="https://www.avaca.fi" target="_blank" rel="noopener">Avaca Oy</a><span class="ctag">Asiantuntijapalvelut</span></div>
+      <div class="client"><a class="cname" href="https://www.yrittajat.fi" target="_blank" rel="noopener">Suomen Yrittäjät ry</a><span class="ctag">Etujärjestö</span></div>
+      <div class="client"><a class="cname" href="https://www.hankintakeino.fi" target="_blank" rel="noopener">KEINO-osaamiskeskus</a><span class="ctag">Julkiset hankinnat</span></div>
+      <div class="client"><a class="cname" href="https://www.nit.fi" target="_blank" rel="noopener">NIT Naval Interior Team Ltd</a><span class="ctag">Meriteollisuus</span></div>
+      <div class="client"><a class="cname" href="https://www.motiva.fi" target="_blank" rel="noopener">Motiva Oy</a><span class="ctag">Kestävä kehitys</span></div>
+      <div class="client"><a class="cname" href="https://www.easyzone.fi" target="_blank" rel="noopener">EasyZone Oy</a><span class="ctag">Palveluyritys</span></div>
+      <div class="client"><a class="cname" href="https://www.tanssioppilaitos.fi" target="_blank" rel="noopener">Turun Seudun Tanssioppilaitos ry</a><span class="ctag">Koulutus</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="yhteys">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Ota yhteyttä</span>
+      <h2>Keskustellaan liiketoimintanne mahdollisuuksien kasvattamisesta</h2>
+    </div>
+    <div class="contacts fade">
+        <div class="line">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+          <div><div class="lbl">Yhteyshenkilö</div><div class="val">Jarkko Koskinen</div></div>
+        </div>
+        <div class="line">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-3 2a13 13 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+          <div><div class="lbl">Puhelin</div><div class="val"><a href="tel:+358400709622">0400 709 622</a></div></div>
+        </div>
+        <div class="line">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <div><div class="lbl">Sähköposti</div><div class="val"><a href="mailto:jarkko.koskinen@awellcare.fi">jarkko.koskinen@awellcare.fi</a></div></div>
+        </div>
+        <div class="line">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div><div class="lbl">Osoite</div><div class="val">Alhonkaari 6, 21250 Masku</div></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span class="brand"><span class="dot" style="display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--accent);vertical-align:middle;margin-right:8px"></span>aWellCare Oy</span>
+      <span>© 2026 aWellCare Oy · Masku, Suomi</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  // Scroll reveal
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
